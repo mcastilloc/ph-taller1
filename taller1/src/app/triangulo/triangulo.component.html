@@ -1,0 +1,49 @@
+<ion-card>
+
+  <ion-card-header>
+    <ion-card-title>Triángulo</ion-card-title>
+    <h3>Perímetro</h3>
+    <p>
+      El perímetro de un triángulo es la suma de las longitudes de sus tres lados.<br>
+      En otras palabras, es la medida total del contorno o borde del triángulo.<br>
+    </p>
+    <ion-img src="assets/img/triangulo.png" style="width: 200px;" margin:auto;></ion-img>
+  </ion-card-header>
+
+  <ion-card-content>
+
+    <ion-item>
+      <ion-input
+        type="number"
+        label="Lado A (cm)"
+        [(ngModel)]="ladoa">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        type="number"
+        label="Lado B (cm)"
+        [(ngModel)]="ladob">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        type="number"
+        label="Lado C (cm)"
+        [(ngModel)]="ladoc">
+      </ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="calcular()">
+      Calcular el perímetro
+    </ion-button>
+
+    <ion-text *ngIf="mostrarResultado">
+      <h2>El perímetro es: {{ resultado }}</h2>
+    </ion-text>
+
+  </ion-card-content>
+
+</ion-card>
